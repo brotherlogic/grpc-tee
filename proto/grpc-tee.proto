@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package grpc-tee;
+
+message Server {
+  string host = 1;
+  int32 port = 2;
+  bool master = 3;
+}
+
+message Tee {
+  string service = 1;
+  repeated Server servers = 2;
+}
+
+message Config {
+  repeated Tee tees = 1;
+}
