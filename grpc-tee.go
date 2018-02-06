@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	port = ":50054"
+	port = ":50042"
 )
 
 func tee(ctx context.Context, fullMethodName string) (context.Context, *grpc.ClientConn, error) {
